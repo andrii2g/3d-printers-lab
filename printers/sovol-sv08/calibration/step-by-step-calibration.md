@@ -66,66 +66,36 @@ Recurring maintenance:
 - Re-run when moving to a filament family with clearly different nozzle or bed temperatures, for example PLA to ABS/ASA or TPU to PETG if you want the heater tuning to match the new working range
 - Optional periodic check every few months is reasonable if you want to verify stability
 
-## 3. `QUAD_GANTRY_LEVEL`
+## 3. Automatic gantry leveling and bed mesh
 
 Purpose:
 
-- Align the gantry before bed mesh and first-layer tuning
+- Use the stock SV08 print macros that already handle gantry leveling and adaptive bed mesh
 
 How to do it:
 
-- Keep the bed at target print temperature
-- Keep the nozzle warm enough to stay clean and stable; `140-150C` is usually enough for this step
-- Clean any ooze from the nozzle before probing
-- On stock SV08, this step may autoheat to bed `80C` and nozzle `130C`; if that happens, let the macro control the temperatures
-- After successful homing, run `QUAD_GANTRY_LEVEL`
-- Wait until the full routine finishes
-- If your setup requires it, run `G28` once more after gantry leveling
+- On stock SV08, `START_PRINT` already runs `QUAD_GANTRY_LEVEL` if needed
+- The same print-start flow also runs `BED_MESH_CALIBRATE ADAPTIVE=1`
+- The wrapped macros already manage the heating and homing behavior for these steps
+- For normal use, you do not need to run `QUAD_GANTRY_LEVEL` and `BED_MESH_CALIBRATE` manually every time
+- Run them manually only for troubleshooting, validation, or when checking the macros directly
 
 Expected result:
 
-- The routine finishes without stopping on a probe error
-- Z adjustments get smaller if you repeat the command
-- The gantry becomes stable and repeatable
+- Print start completes the automatic leveling sequence without probe errors
+- Gantry leveling applies correctly
+- Adaptive bed mesh is generated as part of the start sequence
 
 If OK:
 
-- If this step updates stored leveling values on your setup, run `SAVE_CONFIG`
-- Continue to `BED_MESH_CALIBRATE`
-
-If not OK:
-
-- Check probe reliability, bed clearance, gantry mechanics, and loose parts
-- Repeat `QUAD_GANTRY_LEVEL`
-
-## 4. `BED_MESH_CALIBRATE`
-
-Purpose:
-
-- Measure the bed surface after gantry alignment
-
-How to do it:
-
-- Run `BED_MESH_CALIBRATE`
-- Let the probe finish the full mesh
-- Save or load the mesh only if the result looks sane in the interface
-
-Expected result:
-
-- Mesh completes without probe failure
-- No corner or area looks clearly wrong compared with the rest
-- The measured surface looks believable and repeatable
-
-If OK:
-
-- If this step updates stored mesh or probe-related values on your setup, run `SAVE_CONFIG`
 - Continue to the first-layer test and Z adjustment
 
 If not OK:
 
-- Clean the bed, check the probe, confirm the plate is seated correctly, and repeat the mesh
+- Check probe reliability, bed clearance, gantry mechanics, and the stock macros in `Macro.cfg`
+- If needed, run `QUAD_GANTRY_LEVEL` or `BED_MESH_CALIBRATE` manually for diagnosis
 
-## 5. First-layer test and Z adjustment
+## 4. First-layer test and Z adjustment
 
 Purpose:
 
@@ -164,7 +134,7 @@ If not OK:
 
 - Adjust Z offset and repeat the first-layer test until the result is stable
 
-## 6. Material test prints
+## 5. Material test prints
 
 Purpose:
 
@@ -192,7 +162,7 @@ If not OK:
 
 - Change only one setting at a time and repeat the relevant test
 
-## 7. Optional `SHAPER_CALIBRATE`
+## 6. Optional `SHAPER_CALIBRATE`
 
 Purpose:
 
@@ -219,7 +189,7 @@ If not OK:
 
 - Check accelerometer setup and mounting, then repeat only if needed
 
-## 8. `SAVE_CONFIG`
+## 7. `SAVE_CONFIG`
 
 Purpose:
 
@@ -244,7 +214,7 @@ If not OK:
 
 - Review config write permissions and any config syntax problems
 
-## 9. Final validation print
+## 8. Final validation print
 
 Purpose:
 

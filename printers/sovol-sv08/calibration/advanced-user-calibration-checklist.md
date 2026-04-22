@@ -26,50 +26,41 @@ Rule:
 - Expect: stable targets, successful tune output
 - Next: `QUAD_GANTRY_LEVEL`
 
-## 3. `QUAD_GANTRY_LEVEL`
+## 3. Automatic gantry leveling and bed mesh
 
-- Do: level gantry after homing
-- Preheat: keep bed hot, keep nozzle warm and clean; full print temp is not required for this step
-- Note: if stock SV08 autoheats to bed `80C` and nozzle `130C`, let the macro handle it
-- Save: run `SAVE_CONFIG` if this step updates stored leveling values on your setup
-- Expect: successful routine, repeatable result, no probe failures
-- Next: `BED_MESH_CALIBRATE`
-
-## 4. `BED_MESH_CALIBRATE`
-
-- Do: generate fresh bed mesh
-- Save: run `SAVE_CONFIG` if this step updates stored mesh data on your setup
-- Expect: full mesh completes, no obviously bad points
+- Do: on stock SV08, let `START_PRINT` handle `QUAD_GANTRY_LEVEL` and `BED_MESH_CALIBRATE ADAPTIVE=1`
+- Note: manual QGL and bed mesh are mainly for troubleshooting or validation
+- Expect: start macro completes leveling and adaptive mesh without probe errors
 - Next: first-layer test and Z offset check
 
-## 5. First-layer test and Z offset
+## 4. First-layer test and Z offset
 
 - Do: print a first-layer pattern and trim Z in small steps
 - Save: run `SAVE_CONFIG` if the final Z offset is written on the printer side
 - Expect: smooth joined lines, even squish, no drag, no gaps
 - Next: material tests
 
-## 6. Material tests
+## 5. Material tests
 
 - Do: flow test, stringing test, optional dimension test
 - Save: slicer profile changes after each confirmed result
 - Expect: correct walls, low stringing, repeatable dimensions
 - Next: optional `SHAPER_CALIBRATE` or optional `PID_CALIBRATE ...`
 
-## 7. Optional `SHAPER_CALIBRATE`
+## 6. Optional `SHAPER_CALIBRATE`
 
 - Do: run resonance tuning if hardware changed or ringing is visible
 - Save: run `SAVE_CONFIG` if you keep the suggested shaper values
 - Expect: valid shaper recommendation, no sensor or motion errors
 - Next: optional `PID_CALIBRATE ...` or `SAVE_CONFIG`
 
-## 8. `SAVE_CONFIG`
+## 7. `SAVE_CONFIG`
 
 - Do: save only confirmed values
 - Expect: clean save, normal restart, values persist after reconnect
 - Next: final validation print
 
-## 9. Final validation print
+## 8. Final validation print
 
 - Do: print one known-good model with the target profile
 - Expect: good first layer, even walls, clean corners, closed top layers, acceptable dimensions
