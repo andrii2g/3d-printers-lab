@@ -23,4 +23,4 @@ This repository is intended to keep printer knowledge in one place while still s
 
 - `docs/` for cross-printer knowledge and shared procedures
 - `printers/` for machine-specific records, configs, and notes
-
+- `templates/` for reusable markdown templates when adding new entries
