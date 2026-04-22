@@ -2,6 +2,9 @@
 
 Short first-start checklist for getting the Sovol SV08 on the network and opening the web UI.
 
+## 0. Use the USB flash drive included in the machine's accessory package to configure WiFi connection
+See [User manual p.18](/printers/sovol-sv08/manuals/User%20Manual-SV08.pdf)
+
 ## 1. Basic first power-on check
 
 - Do: power on the printer and wait until the screen finishes loading

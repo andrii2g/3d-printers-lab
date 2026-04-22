@@ -4,6 +4,11 @@ All notable documentation changes for `printers/sovol-sv08/` are recorded here.
 
 ## 2026-04-22
 
+
+### Added maintenance workflow
+
+- Added [Software Update Maintenance](./maintenance/software-update-maintenance.md) with backup steps, update order, per-component maintenance guidance, dirty-repo recovery notes, and post-update verification steps.
+
 ### Added calibration guides
 
 - Added [Basic User Calibration Checklist](./calibration/step-by-step-calibration.md) with step-by-step calibration flow, commands, expected results, and next actions.
@@ -16,9 +21,7 @@ All notable documentation changes for `printers/sovol-sv08/` are recorded here.
 - Added [First Start and Network Access](./notes/first-start-and-network-access.md) for Wi-Fi/Ethernet setup, IP lookup, and opening the web UI.
 - Added [Terminal Access](./notes/terminal-access.md) with SSH login details and common first commands.
 
-### Added software maintenance notes
 
-- Added [Software Update and Upgrade](./notes/software-update-and-upgrade.md) with a conservative update path for stock SV08 firmware and notes about Moonraker/Mainsail dependency warnings.
 
 ### Updated notes index
 

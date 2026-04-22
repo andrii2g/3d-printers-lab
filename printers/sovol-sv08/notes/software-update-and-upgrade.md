@@ -35,6 +35,27 @@ Important:
 - Check: confirm it is for `SV08`, not another model
 - Expected: package comes from official Sovol source or official download link
 
+### How to verify the official package
+
+- Open the official Sovol SV08 page or SV08 wiki entry first
+- Look for an official firmware download link or package reference
+- Check that the model is exactly `SV08`
+- Check that the filename or package date is newer than your current one
+- Check for release notes, changelog text, or official forum confirmation of what changed
+- If the page label, file date, and forum reports do not match, treat the package as not verified yet
+
+Useful sources:
+
+- [Sovol SV08 product page](https://www.sovol3d.com/products/sovol-sv08-3d-printer)
+- [Sovol SV08 GitHub repository](https://github.com/Sovol3d/SV08)
+- [Firmware update - where is changelog?](https://forum.sovol3d.com/t/firmware-update-where-is-changelog/6355)
+- [New firmware is coming soon ?](https://forum.sovol3d.com/t/new-firmware-is-coming-soon/8372)
+
+Practical rule:
+
+- Same filename or date and unclear release notes: do not update yet
+- New filename or date, confirmed SV08 target, and known fixes: acceptable update candidate
+
 ## 4. Update using the official Sovol method
 
 - Do: follow the Sovol package or firmware instructions exactly
