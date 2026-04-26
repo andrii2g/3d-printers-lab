@@ -35,9 +35,9 @@ Rule:
 
 ## 4. First-layer test and Z offset
 
-- Do: print a first-layer pattern and trim Z in small steps
+- Do: run `PROBE_CALIBRATE`, use paper or preferably a `0.10 mm` feeler gauge, adjust with `TESTZ Z=-0.1`, `TESTZ Z=-0.05`, `TESTZ Z=-0.01`, `TESTZ Z=0.01`, then `ACCEPT` and `SAVE_CONFIG`
 - Save: run `SAVE_CONFIG` if the final Z offset is written on the printer side
-- Expect: smooth joined lines, even squish, no drag, no gaps
+- Expect: paper or gauge moves with light drag; final first-layer print shows smooth joined lines, even squish, no drag, no gaps
 - Next: material tests
 
 ## 5. Material tests

@@ -99,28 +99,44 @@ If not OK:
 
 Purpose:
 
-- Set the real nozzle-to-bed gap for reliable adhesion
+- Set the initial nozzle-to-bed gap, then confirm it with a real first-layer print
 
 How to do it:
 
-- Start a simple first-layer test print
-- Watch the first layer closely
-- Adjust Z offset in very small steps from the screen or interface while printing
+- In the console, run `PROBE_CALIBRATE`
+- Let Klipper move into calibration mode
+- Use the paper method or, better, a `0.10 mm` feeler gauge
+- Move the nozzle down slowly until the paper or feeler gauge has light friction
+- Use small adjustment steps such as:
+  - `TESTZ Z=-0.1`
+  - `TESTZ Z=-0.05`
+  - `TESTZ Z=-0.01`
+  - `TESTZ Z=0.01`
+- When the feel is correct, run:
+  - `ACCEPT`
+  - `SAVE_CONFIG`
+- Let the printer restart after `SAVE_CONFIG`
+- Then start a simple first-layer test print and watch the first layer closely
 
 Expected result:
 
+- Paper method: acceptable
+- `0.10 mm` feeler gauge: better and more repeatable
+- Correct feel: the paper or gauge still moves, but with light drag
 - Lines are smooth, slightly squished, and joined together
 - Surface looks even across the bed
 - No dragging, tearing, or gaps between lines
 
 If nozzle is too high:
 
+- Paper or gauge moves too freely with almost no resistance
 - Lines look round
 - Lines do not join well
 - Adhesion is weak
 
 If nozzle is too low:
 
+- Paper or gauge is pinned, scratched, or hard to move
 - Surface looks rough or over-squished
 - Nozzle drags through the plastic
 - Extra material pushes out to the sides
@@ -132,7 +148,12 @@ If OK:
 
 If not OK:
 
-- Adjust Z offset and repeat the first-layer test until the result is stable
+- Adjust Z offset and repeat the process until the result is stable
+
+Important:
+
+- `PROBE_CALIBRATE` only sets the starting value
+- The real confirmation is the first-layer print
 
 ## 5. Material test prints
 

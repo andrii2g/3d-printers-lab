@@ -24,3 +24,7 @@ This repository is intended to keep printer knowledge in one place while still s
 - `docs/` for cross-printer knowledge and shared procedures
 - `printers/` for machine-specific records, configs, and notes
 - `templates/` for reusable markdown templates when adding new entries
+
+# Disclaimer
+
+You use it at your onw risk! I'm not responsible for any damage that might result. Always be careful and double check everything when configuring or working with your printer. And as always, never leave unattended while printing!
