@@ -1,0 +1,86 @@
+solid SV08_first_layer_square_60x60x0p20mm
+  facet normal 0 0 -1
+    outer loop
+      vertex -30.000000 -30.000000 0.000000
+      vertex 30.000000 30.000000 0.000000
+      vertex 30.000000 -30.000000 0.000000
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex -30.000000 -30.000000 0.000000
+      vertex -30.000000 30.000000 0.000000
+      vertex 30.000000 30.000000 0.000000
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex -30.000000 -30.000000 0.200000
+      vertex 30.000000 -30.000000 0.200000
+      vertex 30.000000 30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex -30.000000 -30.000000 0.200000
+      vertex 30.000000 30.000000 0.200000
+      vertex -30.000000 30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -30.000000 -30.000000 0.000000
+      vertex 30.000000 -30.000000 0.000000
+      vertex 30.000000 -30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex -30.000000 -30.000000 0.000000
+      vertex 30.000000 -30.000000 0.200000
+      vertex -30.000000 -30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 30.000000 -30.000000 0.000000
+      vertex 30.000000 30.000000 0.000000
+      vertex 30.000000 30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 30.000000 -30.000000 0.000000
+      vertex 30.000000 30.000000 0.200000
+      vertex 30.000000 -30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 30.000000 30.000000 0.000000
+      vertex -30.000000 30.000000 0.000000
+      vertex -30.000000 30.000000 0.200000
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 30.000000 30.000000 0.000000
+      vertex -30.000000 30.000000 0.200000
+      vertex 30.000000 30.000000 0.200000
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex -30.000000 30.000000 0.000000
+      vertex -30.000000 -30.000000 0.000000
+      vertex -30.000000 -30.000000 0.200000
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex -30.000000 30.000000 0.000000
+      vertex -30.000000 -30.000000 0.200000
+      vertex -30.000000 30.000000 0.200000
+    endloop
+  endfacet
+endsolid SV08_first_layer_square_60x60x0p20mm

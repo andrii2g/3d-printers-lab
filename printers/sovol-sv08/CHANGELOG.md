@@ -24,6 +24,21 @@ All notable documentation changes for `printers/sovol-sv08/` are recorded here.
 
 - Updated both calibration checklists to distinguish between slicer-side changes and printer-side values that should be stored with `SAVE_CONFIG`.
 
+## 2026-04-29
+
+### Added maintenance logging structure
+
+- Expanded [maintenance/README.md](./maintenance/README.md) with a clearer structure for `routine/`, `incidents/`, and `assets/`.
+- Added [Parts History](./maintenance/parts-history.md) for quick tracking of replaced or notable parts.
+- Added [Nozzle Clog Incident - 2026-04-29](./maintenance/incidents/2026-04-29-nozzle-clog.md) with symptom, attempted fix, result, tutorial reference, and media guidance.
+- Added a dedicated media folder for the incident under [maintenance/assets/incidents/2026-04-29-nozzle-clog](./maintenance/assets/incidents/2026-04-29-nozzle-clog).
+
+### Added models and project tracking structure
+
+- Added [models/README.md](./models/README.md) for a small SV08-local model area.
+- Added [Calibration Models](./models/calibration/README.md) with recommended subfolders for first-layer, flow, temperature, retraction, dimensional, and resonance tests.
+- Added [Projects](./models/projects/README.md) and [SV08 Enclosure](./models/projects/sv08-enclosure.md) to track the enclosure build from the linked Printables source.
+
 ## 2026-04-22
 
 
@@ -48,4 +63,3 @@ All notable documentation changes for `printers/sovol-sv08/` are recorded here.
 ### Updated notes index
 
 - Updated [notes/README.md](./notes/README.md) to link the new startup, network, update, and terminal-access documents.
-
