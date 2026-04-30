@@ -39,6 +39,13 @@ All notable documentation changes for `printers/sovol-sv08/` are recorded here.
 - Added [Calibration Models](./models/calibration/README.md) with recommended subfolders for first-layer, flow, temperature, retraction, dimensional, and resonance tests.
 - Added [Projects](./models/projects/README.md) and [SV08 Enclosure](./models/projects/sv08-enclosure.md) to track the enclosure build from the linked Printables source.
 
+## 2026-04-30
+
+### Added new incident record
+
+- Added [Filament Leak Above Nozzle - 2026-04-30](./maintenance/incidents/2026-04-30-filament-leak-above-nozzle.md) with placeholders for inspection, root cause, final fix, and follow-up checks.
+- Added a dedicated media folder for the incident under [maintenance/assets/incidents/2026-04-30-filament-leak-above-nozzle](./maintenance/assets/incidents/2026-04-30-filament-leak-above-nozzle).
+
 ## 2026-04-22
 
 
