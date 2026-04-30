@@ -14,3 +14,4 @@ Current notes and logs:
 - [Parts History](./parts-history.md)
 - [Software Update Maintenance](./software-update-maintenance.md)
 - [Nozzle Clog Incident - 2026-04-29](./incidents/2026-04-29-nozzle-clog.md)
+- [Filament Leak Above Nozzle - 2026-04-30](./incidents/2026-04-30-filament-leak-above-nozzle.md)
